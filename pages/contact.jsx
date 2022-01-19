@@ -124,17 +124,32 @@ function Contact() {
                   </Button>
                 </form> */}
                 <form name="contact" method="POST" data-netlify="true">
-                  <input type="hidden" name="form-name" value="contact"/>
-                  <p>
-                    <label>
-                      Your Name: <input type="text" name="name" />
-                    </label>
-                  </p>
-                  <p>
-                    <label>
-                      Your Email: <input type="email" name="email" />
-                    </label>
-                  </p>
+                  <input type="hidden" name="form-name" value="contact" />
+                  <Grid container xs={12} spacing={0.5}>
+                    <Grid item xs={6}>
+                      <TextField
+                        placeholder="Enter your name"
+                        name="name"
+                        type="text"
+                        id="name"
+                        label="Name"
+                        fullWidth
+                        margin="normal"
+                      />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <TextField
+                        placeholder="someone@gmail.com"
+                        type="email"
+                        id="email"
+                        name="email"
+                        dataerror="This email address is invalid"
+                        label="Email"
+                        fullWidth
+                        margin="normal"
+                      />
+                    </Grid>
+                  </Grid>
                   <p>
                     <label>
                       Your Role:{" "}
