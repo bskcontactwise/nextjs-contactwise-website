@@ -123,7 +123,7 @@ function Contact() {
                     Submit
                   </Button>
                 </form> */}
-                <form name="contact" method="POST" data-netlify="true">
+                <form name="contact" method="POST" data-netlify="true" action="/success">
                   <input type="hidden" name="form-name" value="contact" />
                   <Grid container xs={12} spacing={0.5}>
                     <Grid item xs={6}>
