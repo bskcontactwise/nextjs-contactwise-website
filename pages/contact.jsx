@@ -174,6 +174,27 @@ function Contact() {
                       />
                     </Grid>
                   </Grid>
+                  <TextField
+                    placeholder="Enter Subject"
+                    type="text"
+                    name="subject"
+                    id="subject"
+                    label="Subject"
+                    fullWidth
+                    margin="normal"
+                  />
+
+                  <TextField
+                    placeholder="Enter Message"
+                    name="message"
+                    id="message"
+                    rows={3}
+                    multiline
+                    label="Message"
+                    fullWidth
+                    margin="normal"
+                  />
+                  <hr />
                   <p>
                     <label>
                       Your Role:{" "}
