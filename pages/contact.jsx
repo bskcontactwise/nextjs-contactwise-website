@@ -46,8 +46,8 @@ function Contact() {
                   Send us mail
                 </Typography>
 
-                <form name="contactfggg" method="POST" data-netlify="true" action="/success">
-                  <TextField type="hidden" name="form-name" value="contact" className="hiddenfield" />
+                <form name="contact" method="POST" data-netlify="true" action="/success">
+                  <input type="hidden" name="form-name" value="contact" className="hiddenfield" />
                   <Grid container xs={12} spacing={.5}>
                     <Grid item xs={6}>
                       <TextField
