@@ -150,6 +150,30 @@ function Contact() {
                       />
                     </Grid>
                   </Grid>
+                  <Grid container xs={12} spacing={0.5}>
+                    <Grid item xs={6}>
+                      <TextField
+                        placeholder="+201-985376"
+                        type="number"
+                        name="number"
+                        id="number"
+                        fullWidth
+                        label=" Phone Number"
+                        margin="normal"
+                      />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <TextField
+                        placeholder="Enter Company"
+                        type="text"
+                        name="company"
+                        id="company"
+                        label="Company"
+                        fullWidth
+                        margin="normal"
+                      />
+                    </Grid>
+                  </Grid>
                   <p>
                     <label>
                       Your Role:{" "}
