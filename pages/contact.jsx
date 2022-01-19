@@ -1,11 +1,11 @@
-import react from 'react'
+import react from "react";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { CenterFocusStrong } from '@mui/icons-material';
+import { CenterFocusStrong } from "@mui/icons-material";
 
 function Contact() {
   return (
@@ -46,7 +46,7 @@ function Contact() {
                   Send us mail
                 </Typography>
 
-                <form name="contact" method="POST" data-netlify="true" action="/success">
+                {/* <form name="contact" method="POST" data-netlify="true" action="/success">
                   <input type="hidden" name="form-name" value="contact" className="hiddenfield" />
                   <Grid container xs={12} spacing={.5}>
                     <Grid item xs={6}>
@@ -122,6 +122,35 @@ function Contact() {
                   <Button variant="contained" type="submit" id="SendBtn" fullWidth>
                     Submit
                   </Button>
+                </form> */}
+                <form name="contact" method="POST" data-netlify="true">
+                  <p>
+                    <label>
+                      Your Name: <input type="text" name="name" />
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      Your Email: <input type="email" name="email" />
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      Your Role:{" "}
+                      <select name="role[]" multiple>
+                        <option value="leader">Leader</option>
+                        <option value="follower">Follower</option>
+                      </select>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      Message: <textarea name="message"></textarea>
+                    </label>
+                  </p>
+                  <p>
+                    <button type="submit">Send</button>
+                  </p>
                 </form>
               </Box>
             </Grid>
@@ -130,7 +159,6 @@ function Contact() {
       </Container>
     </>
   );
-  
 }
 
 export default Contact;
