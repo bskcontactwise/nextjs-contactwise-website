@@ -124,7 +124,7 @@ function Contact() {
                   </Button>
                 </form> */}
                 <form name="contact" method="POST" data-netlify="true">
-                  <input type="hidden" name="form-name" value="contact">
+                  <input type="hidden" name="form-name" value="contact"/>
                   <p>
                     <label>
                       Your Name: <input type="text" name="name" />
