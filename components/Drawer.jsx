@@ -10,6 +10,9 @@ import { makeStyles } from "@mui/styles";
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { useHistory } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -30,6 +33,9 @@ const useStyles = makeStyles(() => ({
 function DrawerComponent() {
   const classes = useStyles();
   const [openDrawer, setOpenDrawer] = useState(false);
+  const router = useRouter();
+  //const history = useHistory();
+  // const location = useLocation();
   return (
     <>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
@@ -40,35 +46,60 @@ function DrawerComponent() {
             </Typography>
           </Box>
           <List>
-            <ListItem button onClick={() => setOpenDrawer(false)}>
+            <ListItem
+              button
+              onClick={() => {
+                router.push("/");
+                setOpenDrawer(false);
+              }}
+            >
               <ListItemText>
-                <Link href="/" className={classes.link}>
+               
                   Home
-                </Link>
+               
               </ListItemText>
             </ListItem>
             <Divider />
-            <ListItem button onClick={() => setOpenDrawer(false)}>
+            <ListItem
+              button
+              // className={location.pathname == item.path ? classes.active : null}
+              onClick={() => {
+                setOpenDrawer(false);
+                router.push("/features");
+              }}
+            >
               <ListItemText>
-                <Link href="/features" className={classes.link}>
+              
                   Features
-                </Link>
+               
               </ListItemText>
             </ListItem>
             <Divider />
-            <ListItem button onClick={() => setOpenDrawer(false)}>
+            <ListItem
+              button
+              onClick={() => {
+                router.push("/pricing");
+                setOpenDrawer(false);
+              }}
+            >
               <ListItemText>
-                <Link href="/pricing" className={classes.link}>
+              
                   Pricing
-                </Link>
+               
               </ListItemText>
             </ListItem>
             <Divider />
-            <ListItem button onClick={() => setOpenDrawer(false)}>
+            <ListItem
+              button
+              onClick={() => {
+                router.push("/contact");
+                setOpenDrawer(false);
+              }}
+            >
               <ListItemText>
-                <Link href="/contact" className={classes.link}>
+              
                   Contact
-                </Link>
+               
               </ListItemText>
             </ListItem>
             <Divider />
