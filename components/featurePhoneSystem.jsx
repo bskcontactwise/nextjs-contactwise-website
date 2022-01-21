@@ -14,7 +14,7 @@ import CardActions from "@mui/material/CardActions";
 import Avatar from "@mui/material/Avatar";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { red, white, blue, purple, grey } from "@mui/material/colors";
-import Featurecard from "./Featurecard";
+import Featurecard from "./featureCard";
 
 const iconSize = 30;
 
