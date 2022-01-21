@@ -8,6 +8,8 @@ import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
 import { makeStyles } from "@mui/styles";
 import Drawer from "@mui/material/Drawer";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -20,6 +22,9 @@ const useStyles = makeStyles(() => ({
   icon: {
     color: "white",
   },
+  list: {
+    width: "240px",
+  },
 }));
 
 function DrawerComponent() {
@@ -28,40 +33,47 @@ function DrawerComponent() {
   return (
     <>
       <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
-        <List>
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link href="/" className={classes.link}>
-                Home
-              </Link>
-            </ListItemText>
-          </ListItem>
-          <Divider />
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link href="/about" className={classes.link}>
-                About
-              </Link>
-            </ListItemText>
-          </ListItem>
-          <Divider />
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link href="/contact" className={classes.link}>
-                Contact
-              </Link>
-            </ListItemText>
-          </ListItem>
-          <Divider />
-          <ListItem onClick={() => setOpenDrawer(false)}>
-            <ListItemText>
-              <Link href="/about" className={classes.link}>
-                Faq
-              </Link>
-            </ListItemText>
-          </ListItem>
-          <Divider />
-        </List>
+        <div className={classes.list}>
+          <Box textAlign="Left" p={2}>
+            <Typography variant="h5" color="primary">
+              ContactWise
+            </Typography>
+          </Box>
+          <List>
+            <ListItem button onClick={() => setOpenDrawer(false)}>
+              <ListItemText>
+                <Link href="/" className={classes.link}>
+                  Home
+                </Link>
+              </ListItemText>
+            </ListItem>
+            <Divider />
+            <ListItem button onClick={() => setOpenDrawer(false)}>
+              <ListItemText>
+                <Link href="/features" className={classes.link}>
+                  Features
+                </Link>
+              </ListItemText>
+            </ListItem>
+            <Divider />
+            <ListItem button onClick={() => setOpenDrawer(false)}>
+              <ListItemText>
+                <Link href="/pricing" className={classes.link}>
+                  Pricing
+                </Link>
+              </ListItemText>
+            </ListItem>
+            <Divider />
+            <ListItem button onClick={() => setOpenDrawer(false)}>
+              <ListItemText>
+                <Link href="/contact" className={classes.link}>
+                  Contact
+                </Link>
+              </ListItemText>
+            </ListItem>
+            <Divider />
+          </List>
+        </div>
       </Drawer>
       <IconButton onClick={() => setOpenDrawer(!openDrawer)} className={classes.icon}>
         <MenuIcon />
