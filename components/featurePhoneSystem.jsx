@@ -14,14 +14,14 @@ import CardActions from "@mui/material/CardActions";
 import Avatar from "@mui/material/Avatar";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { red, white, blue, purple, grey } from "@mui/material/colors";
-import FeatureCard from "./FeatureCard";
+import Featurecard from "./Featurecard";
 
 const iconSize = 30;
 
 const featurePhoneSystem = () => {
   return (
     <>
-      <Box id="phonesystem" sx={{ bgcolor: grey[100], p: 5, pt:5 }}>
+      <Box id="phonesystem" sx={{ bgcolor: grey[100], p: 5, pt: 5 }}>
         <Container>
           <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={2}>
@@ -44,7 +44,7 @@ const featurePhoneSystem = () => {
                       <>
                         <Grid item key={info.id} xs={12} md={6} lg={6}>
                           <div data-aos="fade-up">
-                            <FeatureCard info={info} str={str} isshown={isshown} />
+                            <Featurecard info={info} str={str} isshown={isshown} />
                             {/* <Card elevation={0} sx={{ p: 0.5, bgcolor: "transparent" }}>
                                 <Avatar
                                   sx={{ bgcolor: `${info.color}`, width: 50, height: 50, ml: 2 }}
