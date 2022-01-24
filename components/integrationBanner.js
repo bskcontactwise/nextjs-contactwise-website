@@ -11,33 +11,36 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
+import { red, white, blue, purple, grey } from "@mui/material/colors";
 
 function IntegrationBanner() {
   return (
     <>
-      <Container className="text-center bg-white">
-        <Box sx={{ flexGrow: 1 }}>
-          <Typography variant="h4">Easy integration with your favourite apps</Typography>
+      <Container disableGutters maxWidth="false" sx={{ bgcolor: grey[50], py: 5 }}>
+        <Container className="text-center bg-white">
+          <Box sx={{ flexGrow: 1 }}>
+            <Typography variant="h4">Easy integration with your favourite apps</Typography>
 
-          <div className="logos-ticker logos-tickers-theme-dark">
-            <div className="logos-ticker-container">
-              <Microsoft />
-              <Hubspot />
-              <Pipedrive />
-              <Zoho />
-              <Zendesk />
-              <Freshwork />
+            <div className="logos-ticker logos-tickers-theme-dark">
+              <div className="logos-ticker-container">
+                <Microsoft />
+                <Hubspot />
+                <Pipedrive />
+                <Zoho />
+                <Zendesk />
+                <Freshwork />
+              </div>
+              <div className="logos-ticker-container">
+                <Microsoft />
+                <Hubspot />
+                <Pipedrive />
+                <Zoho />
+                <Zendesk />
+                <Freshwork />
+              </div>
             </div>
-            <div className="logos-ticker-container">
-              <Microsoft />
-              <Hubspot />
-              <Pipedrive />
-              <Zoho />
-              <Zendesk />
-              <Freshwork />
-            </div>
-          </div>
-        </Box>
+          </Box>
+        </Container>
       </Container>
     </>
   );

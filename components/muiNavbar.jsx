@@ -5,6 +5,7 @@ import DrawerComponent from "./Drawer";
 import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
 
 import { makeStyles } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -41,7 +42,7 @@ function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky"  >
       <CssBaseline />
       <Toolbar>
         <Typography variant="h4" className={classes.logo} sx={{ flexGrow: 1 }}>
@@ -60,9 +61,7 @@ function Navbar() {
             <Link href="/pricing" className={classes.link}>
               <a>Pricing</a>
             </Link>
-            <Link href="/resources" className={classes.link}>
-              <a>Resources</a>
-            </Link>
+
             <Link href="/contact" className={classes.link}>
               <a>contact</a>
             </Link>
@@ -72,6 +71,7 @@ function Navbar() {
             <Link href="" className={classes.link}>
               <a>Register</a>
             </Link>
+            <Button variant="Contained">Register</Button>
           </div>
         )}
       </Toolbar>
