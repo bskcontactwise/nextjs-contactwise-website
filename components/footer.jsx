@@ -9,65 +9,35 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import List from "@mui/material/List";
+import { StayPrimaryLandscape } from "@mui/icons-material";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <>
-      <Container className={`container-fluid bg-dark text-white mt-5 ${Styles.footerFS}`}>
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={3}>
-            <h5>Contactwise</h5>
-          </Grid>
-          <Grid item xs={12} md={9}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={4}>
-                <h5>Solution</h5>
-                <List>
-                  <ListItem>Call center</ListItem>
-                  <ListItem>Support</ListItem>
-                  <ListItem>Sales</ListItem>
-                  <ListItem>Phone system</ListItem>
-                </List>
+      <Box sx={{ bgcolor: "primary.dark", py: 5 }}>
+        <Container>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={3}>
+              <h5>Contactwise</h5>
+            </Grid>
+            <Grid item xs={12} md={9}>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={4}>
+                  <Typography variant="title">Solution</Typography>
+                  <List>
+                    <Typography variant="title">Solution</Typography>
+                    <ListItem>Call center</ListItem>
+                    <ListItem>Support</ListItem>
+                    <ListItem>Sales</ListItem>
+                    <ListItem>Phone system</ListItem>
+                  </List>
+                </Grid>
               </Grid>
-              <div className="col">
-                <h5>Product</h5>
-                <ul className="list-unstyled">
-                  <li>Workflow Designer</li>
-                  <li>Integration</li>
-                </ul>
-              </div>
-              <div className="col">
-                <h5>Feature</h5>
-                <ul className="list-unstyled">
-                  <li>IVR</li>
-                  <li>Call Routing</li>
-                  <li>Analytics</li>
-                  <li>Click to Call</li>
-                </ul>
-              </div>
-              <div className="col">
-                <h5>Resources</h5>
-                <ul className="list-unstyled">
-                  <li>Blog</li>
-                  <li>Knowledge base</li>
-                  <li>Become an partner</li>
-                  <li>Build an integration</li>
-                </ul>
-              </div>
-              <div className="col">
-                <h5>Company</h5>
-                <ul className="list-unstyled">
-                  <li>Contact us</li>
-                  <li>About us</li>
-                  <li>Career</li>
-                  <li>Status</li>
-                </ul>
-              </div>
             </Grid>
           </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </Box>
       <footer className={`container-fluid  p-3  ${Styles.bgfooter}`}>
         <Box sx={{ padding: 1, boxShadow: 2, border: 1, borderColor: "grey.300" }}>
           <small>Copyright ⓒ FlexiContact {currentYear}. All Rights Reserved</small>

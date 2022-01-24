@@ -14,7 +14,17 @@ import { red, white, blue, purple, grey } from "@mui/material/colors";
 const Featurecard = ({ info, str, isshown }) => {
   return (
     <>
-      <Card elevation={0} sx={{ p: 0.5, bgcolor: "transparent" }}>
+      <Card
+        elevation={0}
+        sx={{
+          p: 2,
+          bgcolor: "transparent",
+          "&:hover": {
+            
+            boxShadow: 1,
+          },
+        }}
+      >
         <Avatar sx={{ bgcolor: `${info.color}`, width: 50, height: 50, ml: 2 }} aria-label="recipe" variant="rounded">
           {info.icon}
         </Avatar>

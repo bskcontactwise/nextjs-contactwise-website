@@ -131,7 +131,7 @@ const data = {
         "You can add new agents into your call center, modify their details and remove agents who no longer work with you. There’s no need to contact us, you can do everything related to agent management yourself, with no hassle.",
       url: "/resources",
       more: false,
-      icon: "bi bi-alarm text-primary fs-2",
+      icon: <PlayArrowIcon style={{ fontSize: iconSize }} />,
       color: "#2196f3",
     },
   ],
