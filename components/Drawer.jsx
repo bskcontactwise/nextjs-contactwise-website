@@ -7,12 +7,13 @@ import ListItemText from "@mui/material/ListItemText";
 import IconButton from "@mui/material/IconButton";
 import Link from "next/link";
 import { makeStyles } from "@mui/styles";
-import Drawer from "@mui/material/Drawer";
+import DrawerIcon from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useHistory } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useRouter } from "next/router";
+import { red, green, yellow, pink, purple, blue, teal, lightblue, orange } from "@mui/material/colors";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -23,7 +24,7 @@ const useStyles = makeStyles(() => ({
     fontSize: "20px",
   },
   icon: {
-    color: "white",
+    color: "black",
   },
   list: {
     width: "240px",
@@ -38,7 +39,11 @@ function DrawerComponent() {
   // const location = useLocation();
   return (
     <>
-      <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
+      <DrawerIcon
+        open={openDrawer}
+        onClose={() => setOpenDrawer(false)}
+        sx={{  color: blue[900] }}
+      >
         <div className={classes.list}>
           <Box textAlign="Left" p={2}>
             <Typography variant="h5" color="primary">
@@ -53,11 +58,7 @@ function DrawerComponent() {
                 setOpenDrawer(false);
               }}
             >
-              <ListItemText>
-               
-                  Home
-               
-              </ListItemText>
+              <ListItemText>Home</ListItemText>
             </ListItem>
             <Divider />
             <ListItem
@@ -68,11 +69,7 @@ function DrawerComponent() {
                 router.push("/features");
               }}
             >
-              <ListItemText>
-              
-                  Features
-               
-              </ListItemText>
+              <ListItemText>Features</ListItemText>
             </ListItem>
             <Divider />
             <ListItem
@@ -82,11 +79,7 @@ function DrawerComponent() {
                 setOpenDrawer(false);
               }}
             >
-              <ListItemText>
-              
-                  Pricing
-               
-              </ListItemText>
+              <ListItemText>Pricing</ListItemText>
             </ListItem>
             <Divider />
             <ListItem
@@ -96,16 +89,12 @@ function DrawerComponent() {
                 setOpenDrawer(false);
               }}
             >
-              <ListItemText>
-              
-                  Contact
-               
-              </ListItemText>
+              <ListItemText>Contact</ListItemText>
             </ListItem>
             <Divider />
           </List>
         </div>
-      </Drawer>
+      </DrawerIcon>
       <IconButton onClick={() => setOpenDrawer(!openDrawer)} className={classes.icon}>
         <MenuIcon />
       </IconButton>

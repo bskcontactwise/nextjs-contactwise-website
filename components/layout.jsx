@@ -1,4 +1,4 @@
-import Navbar from "./muiNavbar";
+import Navbar from "./Navbar";
 import Footer from "./footer1";
 import TryBlock from "./TryBlock";
 

@@ -8,12 +8,13 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Image from "next/image";
+import { red, white, blue, purple, grey } from "@mui/material/colors";
 
 const HeroBanner = () => {
     return (
       <>
-        <Container disableGutters maxWidth="false">
-          <Container>
+        <Container disableGutters maxWidth="false" sx={{bgcolor:blue[50]}}>
+          <Container maxWidth="lg" >
             <Grid container>
               <Grid item xs={12} md={6}>
                 <Box
@@ -21,8 +22,7 @@ const HeroBanner = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "95vh",
-                   
+                    height: "70vh",
                   }}
                 >
                   <Stack sx={{ pt: 4 }} direction="column" spacing={2} justifyContent="left">
@@ -49,11 +49,10 @@ const HeroBanner = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: "95vh",
-                   
+                    height: "70vh",
                   }}
                 >
-                  <Image src="/banner.png" alt="Picture of the author" width={500} height={500} />
+                  <Image src="/banner.png" alt="Picture of the author" width={400} height={400} />
                 </Box>
               </Grid>
             </Grid>

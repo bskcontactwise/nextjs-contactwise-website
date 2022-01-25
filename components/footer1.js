@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
+import MuiLink from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
@@ -10,6 +10,9 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import { red, white, blue, purple, grey } from "@mui/material/colors";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import Link from "next/link";
 
 const footers = [
   {
@@ -53,7 +56,6 @@ const FooterNew = () => {
         sx={{
           borderTop: (theme) => `1px solid ${theme.palette.divider}`,
           bgcolor: grey[50],
-         
         }}
       >
         <Container
@@ -65,18 +67,19 @@ const FooterNew = () => {
           <Grid container spacing={4} justifyContent="space-evenly">
             {footers.map((footer) => (
               <Grid item xs={6} sm={3} key={footer.title}>
-                <Typography variant="h6" color="text.primary" gutterBottom>
+                <Typography variant="h6" color="text.primary" gutterBottom sx={{fontSize:"14px"}}>
                   {footer.title}
                 </Typography>
-                <ul>
+                <List>
                   {footer.description.map((item) => (
-                    <li key={item}>
-                      <Link href="#" variant="subtitle1" color="text.primary" >
-                        {item}
+                    <ListItem key={item}  sx={{ pl: 0, fontSize: "14px", py: 1}}>
+                      
+                      <Link href="#" >
+                       {item}
                       </Link>
-                    </li>
+                    </ListItem>
                   ))}
-                </ul>
+                </List>
               </Grid>
             ))}
           </Grid>

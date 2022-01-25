@@ -11,7 +11,7 @@ function FeatureBanner() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
+          height: "30vh",
           width: "100vw",
           bgcolor: "#265454",
         }}

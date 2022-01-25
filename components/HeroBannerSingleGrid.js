@@ -20,7 +20,7 @@ const HeroBanner = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  height: "85vh",
+                  height: "50vh",
                 }}
               >
                 <Stack sx={{ pt: 4 }} direction="column" spacing={2} justifyContent="center">

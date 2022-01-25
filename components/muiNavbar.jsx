@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
+import { red, white, blue, purple, grey } from "@mui/material/colors";
 
 import { makeStyles } from "@mui/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -15,60 +16,40 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-const useStyles = makeStyles((theme) => ({
-  navlinks: {
-    marginLeft: theme.spacing(5),
-    display: "flex",
-  },
-  logo: {
-    flexGrow: "1",
-    cursor: "pointer",
-  },
-  link: {
-    textDecoration: "none",
-    color: "white",
-    fontSize: "20px",
-    marginLeft: theme.spacing(20),
-    "&:hover": {
-      color: "yellow",
-      borderBottom: "1px solid white",
-    },
-  },
-}));
 
 function Navbar() {
-  const classes = useStyles();
+ 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <AppBar position="sticky"  >
+    <AppBar elevation={0} position="static" sx={{ bgcolor: blue[50], color: "text.primary" }}>
       <CssBaseline />
       <Toolbar>
-        <Typography variant="h4" className={classes.logo} sx={{ flexGrow: 1 }}>
+        <Typography variant="h4"  sx={{ bgcolor: "transparent", flexGrow: 1 }}>
           ContactWise
         </Typography>
         {isMobile ? (
           <DrawerComponent />
         ) : (
           <div className="navlinks">
-            <Link href="/" className={classes.link}>
-              Home
+            <Link href="/" >
+              <a>Home</a>
             </Link>
-            <Link href="/features" className={classes.link}>
+            <Link href="/features" >
               <a>Features</a>
             </Link>
-            <Link href="/pricing" className={classes.link}>
+            <Link href="/pricing" >
               <a>Pricing</a>
             </Link>
 
-            <Link href="/contact" className={classes.link}>
+            <Link href="/contact" >
               <a>contact</a>
             </Link>
-            <Link href="" className={classes.link}>
+            <Link href="" >
               <a>Login</a>
             </Link>
-            <Link href="" className={classes.link}>
+            <Link href="">
               <a>Register</a>
             </Link>
             <Button variant="Contained">Register</Button>
