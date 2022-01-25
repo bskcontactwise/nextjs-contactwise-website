@@ -11,9 +11,15 @@ import Switch from "@mui/material/Switch";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import PricingBanner from "../components/PricingBanner";
+import Card from "@mui/material/Card";
+import CardHeader from "@mui/material/CardHeader";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import CardActions from "@mui/material/CardActions";
+import Stack from "@mui/material/Stack";
 
 import data from "../components/pricingData";
-
+import PricingTable from "../components/pricingTable";
 
 function Pricing() {
   const [switchChat, setswitchChat] = useState(true);
@@ -28,7 +34,8 @@ function Pricing() {
   return (
     <>
       <PricingBanner />
-      <Container>
+      <PricingTable />
+      {/* <Container disableGutters maxWidth="false">
         <Container>
           <Box
             sx={{
@@ -37,7 +44,7 @@ function Pricing() {
               alignItems: "center",
               height: "2vh",
               py: 4,
-              mb:3
+              mb: 3,
             }}
           >
             <label className="mx-3">Monthly</label>
@@ -48,7 +55,7 @@ function Pricing() {
 
           <Grid container spacing={0.5}>
             <Grid item xs={12} md={3}>
-              <div className="card h-100 border">
+              <Card >
                 <div className="card-body text-center py-4">
                   <h5 className="card-title">Free</h5>
 
@@ -75,11 +82,11 @@ function Pricing() {
                     </ul>
                   </p>
                 </div>
-              </div>
+              </Card>
             </Grid>
 
             <Grid item xs={12} md={3}>
-              <div className="card h-100 border">
+              <Card >
                 <div className="card-body text-center py-4">
                   <h5 className="card-title">Standard</h5>
 
@@ -106,11 +113,11 @@ function Pricing() {
                     </ul>
                   </p>
                 </div>
-              </div>
+              </Card>
             </Grid>
 
             <Grid item xs={12} md={3}>
-              <div className="card h-100 border">
+              <Card>
                 <div className="card-body text-center py-4 ">
                   <h5 className="card-title">Premium</h5>
 
@@ -138,11 +145,11 @@ function Pricing() {
                     </ul>
                   </p>
                 </div>
-              </div>
+              </Card>
             </Grid>
 
             <Grid item xs={12} md={3}>
-              <div className="card  h-100 border">
+              <Card >
                 <div className="card-body text-center py-4">
                   <h5 className="card-title">Enterprises</h5>
 
@@ -170,17 +177,31 @@ function Pricing() {
                     </ul>
                   </p>
                 </div>
-              </div>
+              </Card>
             </Grid>
           </Grid>
           <hr />
-          <h3>Addons</h3>
-          <ul>
-            <li>Recording transcription</li>
-            <li>Sentiment analysis</li>
-          </ul>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "start",
+              alignItems: "center",
+              height: "2vh",
+              py: 4,
+              mb: 3,
+            }}
+          >
+            {" "}
+            <Stack direction="column" spacing={1} justifyContent="center">
+              <h3>Addons</h3>
+              <ul>
+                <li>Recording transcription</li>
+                <li>Sentiment analysis</li>
+              </ul>
+            </Stack>
+          </Box>
         </Container>
-      </Container>
+      </Container> */}
     </>
   );
 }

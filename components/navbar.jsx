@@ -66,13 +66,11 @@ function Navbar() {
                 <Link href="">
                   <a>Login</a>
                 </Link>
-                <Link href="">
+                {/* <Link href="">
                   <a>Register</a>
-                </Link>
+                </Link> */}
                 <Button variant="contained">Register</Button>
-                <Button variant="contained" color="success">
-                  Success
-                </Button>
+               
               </div>
             )}
           </Toolbar>

@@ -15,6 +15,7 @@ import HeroBanner from "../components/HeroBanner";
 import SuccessFullBanner from "../components/Successfull";
 
 
+
 export default function Home() {
   return (
     <div >
@@ -23,6 +24,7 @@ export default function Home() {
         <meta name="description" content="Cloud contact center" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+    
       <HeroBanner/>
      
 

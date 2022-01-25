@@ -53,8 +53,8 @@ const FooterNew = () => {
         disableGutters
         maxWidth="false"
         component="footer"
-        sx={{
-          borderTop: (theme) => `1px solid ${theme.palette.divider}`,
+        sx={{ borderTop: (theme) => `1px solid ${theme.palette.divider}`
+         ,
           bgcolor: grey[50],
         }}
       >

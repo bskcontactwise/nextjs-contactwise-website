@@ -10,10 +10,12 @@ import Box from "@mui/material/Box";
 import Image from "next/image";
 import { red, white, blue, purple, grey } from "@mui/material/colors";
 
+
 const HeroBanner = () => {
     return (
       <>
-        <Container disableGutters maxWidth="false" sx={{bgcolor:blue[50]}}>
+        <Container disableGutters maxWidth="false" sx={{ bgcolor: blue[50] }}>
+         
           <Container maxWidth="lg" >
             <Grid container>
               <Grid item xs={12} md={6}>

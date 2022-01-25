@@ -5,7 +5,7 @@ import TryBlock from "./TryBlock";
 export default function Layout({ children }) {
   return (
     <>
-      <Navbar />
+       <Navbar /> 
       <main>{children}</main>
       <TryBlock/>
       <Footer />

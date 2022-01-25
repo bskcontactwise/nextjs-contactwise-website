@@ -7,11 +7,12 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Image from "next/image";
+import { red, white, blue, purple, grey } from "@mui/material/colors";
 
 const PricingBanner = () => {
   return (
     <>
-      <Container disableGutters maxWidth="false">
+      <Container disableGutters maxWidth="false" sx={{ bgcolor: blue[50], py: 5, mb:5 }}>
         <Container maxWidth="md">
           <Grid container>
             <Grid item xs={12} sx={6}>
@@ -20,7 +21,7 @@ const PricingBanner = () => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  height: "50vh",
+                  height: "300px",
                 }}
               >
                 <Stack sx={{ pt: 4 }} direction="column" spacing={2} justifyContent="center">
